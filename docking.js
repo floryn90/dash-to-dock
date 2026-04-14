@@ -1290,7 +1290,7 @@ const DockedDash = GObject.registerClass({
         // Restore dash accessibility
         Main.ctrlAltTabManager.addGroup(
             this.dash, _('Dash'), 'user-bookmarks-symbolic',
-            {focusCallback: this._onAccessibilityFocus.bind(this)});
+            {focusCallback: timestamp => this._onAccessibilityFocus(timestamp)});
     }
 
     /**
